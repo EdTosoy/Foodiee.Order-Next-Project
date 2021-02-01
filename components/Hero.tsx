@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Tilt from "react-parallax-tilt";
 export default function Hero() {
   const icons = [
     {
@@ -60,9 +61,16 @@ export default function Hero() {
             ))}
           </div>
         </div>
-        <div className="">
-          <Image src="/images/hero-img.png" width={560} height={530} alt="hero" />
-        </div>
+        <Tilt>
+          <div className="">
+            <Image
+              src="/images/hero-img.png"
+              width={560}
+              height={530}
+              alt="hero"
+            />
+          </div>
+        </Tilt>
       </main>
     </section>
   );

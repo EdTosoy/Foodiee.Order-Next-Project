@@ -3,8 +3,9 @@ import Head from "next/head";
 import Hero from "components/Hero";
 import About from "components/About";
 import Services from "../components/Services";
-import App from "../components/App";
+import GetApp from "../components/GetApp";
 import Footer from "components/Footer";
+import Menu from "components/Menu";
 
 export default function Home() {
   return (
@@ -18,9 +19,10 @@ export default function Home() {
       </Head>
       <Header />
       <Hero />
+      <Menu />
       <About />
       <Services />
-      <App />
+      <GetApp />
       <Footer />
     </div>
   );

@@ -2,7 +2,7 @@ export default function Header() {
   const nav = [
     {
       name: "Home",
-      id: "Home",
+      id: "",
     },
     {
       name: "Menu",
@@ -22,7 +22,7 @@ export default function Header() {
     },
   ];
   return (
-    <header className="grid-container py-3 border-b  ">
+    <header className="grid-container py-3 border-b sticky top-0 bg-white z-50 ">
       <main className="col-start-2 col-end-3 flex justify-between items-center">
         <h1 className="text-xl font-semibold">
           <a href="#">

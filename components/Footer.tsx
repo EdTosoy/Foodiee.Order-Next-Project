@@ -45,17 +45,23 @@ export default function Footer() {
             venenatis tincidunt. Aenean nec cursus urna,
           </p>
         </div>
-        {
-          footerLink.map(({title,sub1,sub2,sub3,sub4})=>(
-            <div className="mb-2">
-              <h1 className="font-semibold mb-4">{title}</h1>
-              <p className="my-3 hover:text-pink text-xs cursor-pointer">{sub1}</p>
-              <p className="my-3 hover:text-pink text-xs cursor-pointer">{sub2}</p>
-              <p className="my-3 hover:text-pink text-xs cursor-pointer">{sub3}</p>
-              <p className="my-3 hover:text-pink text-xs cursor-pointer">{sub4}</p>
-            </div>
-          ))
-        }
+        {footerLink.map(({ title, sub1, sub2, sub3, sub4 }) => (
+          <div className="mb-2" key={title}>
+            <h1 className="font-semibold mb-4">{title}</h1>
+            <p className="my-3 hover:text-pink text-xs cursor-pointer">
+              {sub1}
+            </p>
+            <p className="my-3 hover:text-pink text-xs cursor-pointer">
+              {sub2}
+            </p>
+            <p className="my-3 hover:text-pink text-xs cursor-pointer">
+              {sub3}
+            </p>
+            <p className="my-3 hover:text-pink text-xs cursor-pointer">
+              {sub4}
+            </p>
+          </div>
+        ))}
       </main>
       <p className="p-8 col-start-2 col-end-3 text-sm text-center ">
         Copyright © 2021 <span className="text-pink">foodie.order</span> All

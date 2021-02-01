@@ -1,7 +1,8 @@
 import Image from "next/image";
+import Tilt from "react-parallax-tilt";
 export default function About() {
   return (
-    <section className="grid-container pt-28 pb-10">
+    <section className="grid-container pt-28 pb-10" id="About" >
       <main className="col-start-2 col-end-3 flex flex-col-reverse md:flex-row justify-between items-center">
         <div className="text-center md:text-left max-w-md">
           <h2 className="text-pink text-lg mb-4 md:text-2xl">About us</h2>
@@ -28,14 +29,16 @@ export default function About() {
             Read More
           </button>
         </div>
-        <div className="">
-          <Image
-            src="/images/about.png"
-            width={560}
-            height={530}
-            alt="about"
-          />
-        </div>
+        <Tilt>
+          <div className="">
+            <Image
+              src="/images/about.png"
+              width={560}
+              height={530}
+              alt="about"
+            />
+          </div>
+        </Tilt>
       </main>
     </section>
   );
