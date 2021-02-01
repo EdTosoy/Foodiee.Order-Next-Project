@@ -6,6 +6,7 @@ module.exports = {
       colors: {
         pink: "#ed5a6c",
         brown: "#2e050a",
+        pinkGray: "#fdf1f3",
       },
     },
     boxShadow: {
