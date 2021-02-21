@@ -1,3 +1,6 @@
+import { MenuContext } from "ContextApi/openMenu";
+import React, { useContext } from "react";
+
 export default function Header() {
   const nav = [
     {
@@ -21,8 +24,28 @@ export default function Header() {
       id: "Get-App",
     },
   ];
+  const { openMenu, setOpenMenu } = useContext(MenuContext);
   return (
-    <header className="grid-container py-3 border-b sticky top-0 bg-white z-50 ">
+    <header
+      className="grid-container py-3 border-b sticky top-0 bg-white z-50 "
+      onClick={() => {
+        setOpenMenu((prev) => !prev);
+        console.log(openMenu);
+      }}
+    >
+      {openMenu && (
+        <div className="col-start-1 md:hidden  col-end-4">
+          <div className="top-12 border-t border-b shadow-3xl absolute w-full  text-center  p-6 bg-white ">
+            {nav.map(({ name, id }) => (
+              <a href={`#${id}`} key={name}>
+                <nav className="cursor-pointer navigation my-4 hover:text-red-400 ">
+                  {name}
+                </nav>
+              </a>
+            ))}
+          </div>
+        </div>
+      )}
       <main className="col-start-2 col-end-3 flex justify-between items-center">
         <h1 className="text-xl font-semibold">
           <a href="#">
