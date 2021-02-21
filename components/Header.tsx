@@ -43,6 +43,9 @@ export default function Header() {
                 </nav>
               </a>
             ))}
+            <button className="py-3 px-8 rounded-full bg-pink text-white transform  hover:shadow-2xl hover:scale-105">
+              Book Now
+            </button>
           </div>
         </div>
       )}
